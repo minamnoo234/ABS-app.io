@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Smart English - Learn English the Smart Way">
+
+  <!-- Viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Smart English">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <title>Smart English</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- ===== VIDEO & CONTENT PROTECTION STYLES ===== -->
+  <style>
+    /* Prevent text selection on protected video elements */
+    [data-protected="true"],
+    [data-protected="true"] * {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+      -webkit-touch-callout: none !important;
+    }
+
+    /* Prevent dragging of iframes and images */
+    iframe, img, video {
+      -webkit-user-drag: none !important;
+      user-drag: none !important;
+    }
+  </style>
+
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    (function (l) {
+      if (l.search) {
+        var q = {};
+        l.search.slice(1).split('&').forEach(function (v) {
+          var a = v.split('=');
+          q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+        });
+        if (q.p !== undefined) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (q.p || '') +
+            (q.q ? ('?' + q.q) : '') +
+            l.hash
+          );
+        }
+      }
+    }(window.location));
+  </script>
+
+  <!-- ===== VIDEO PROTECTION SCRIPTS ===== -->
+  <script type="text/javascript">
+    (function() {
+      'use strict';
+
+      // Disable right-click on video elements and protected views
+      document.addEventListener('contextmenu', function(e) {
+        var target = e.target;
+        if (target.tagName === 'IFRAME' || 
+            target.tagName === 'VIDEO' ||
+            target.closest('[data-protected="true"]') ||
+            target.closest('flt-platform-view')) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      }, true);
+
+      // Prevent dragging
+      document.addEventListener('dragstart', function(e) {
+        var target = e.target;
+        if (target.tagName === 'IFRAME' || 
+            target.tagName === 'VIDEO' || 
+            target.tagName === 'IMG' ||
+            target.closest('[data-protected="true"]')) {
+          e.preventDefault();
+          return false;
+        }
+      }, true);
+    })();
+  </script>
+</head>
+
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+
+</html>
